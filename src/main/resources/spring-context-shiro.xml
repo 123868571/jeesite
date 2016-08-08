@@ -17,8 +17,11 @@
 				/static/** = anon
 				/userfiles/** = anon
 				${adminPath}/cas = cas
+				<!-- 必须通过身份认证方可访问，身份认 证的url必须和过虑器中指定的loginUrl一致 -->
+				<!-- 对应下面的 formAuthenticationFilter-->
 				${adminPath}/login = authc
 				${adminPath}/logout = logout
+				<!-- user表示身份认证通过或通过记住我认证通过的可以访问 -->
 				${adminPath}/** = user
 				/act/editor/** = user
 				/ReportServer/** = user
